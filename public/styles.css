@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+body{
+  background-color: #0d1117;
+
+}
+
+
+nav {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.underline{
+  margin: auto;
+  width: 70vw;
+  height: 2px;
+  background-color: #2a2c2f;
+}
+.circle-design{
+  position: absolute;
+  right: -17%;
+  top: 120%;
+  height: 620px;
+  width: 620px;
+  border: 2px solid #2a2c2f;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle-design1{
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 1056px;
+  right: -351px;
+  overflow-y: hidden;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  animation: rotate 25s infinite linear;
+}
+.circle-design1 > img{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  height:96%;
+  width: 100%;
+}
+.circle-design2{
+  border-radius: 50%;
+  height: 277px;
+  width: 279px;
+  position: absolute;
+  top: 1060px;
+  right: -17%;
+  overflow-y: hidden;
+  transform: translate(-50%, -50%);
+  animation: rotate 25s infinite linear;
+  z-index: 3;
+
+}
+.circle-design2 > img{
+  position: relative;
+  right: 5px;
+height:100%;
+width: 100%;
+}
+/* Add this CSS */
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%)rotate(360deg);
+  }
+}
+
+
+
+.logo {
+  color: rgb(255, 255, 255);
+  margin-left: 40px;
+  font-size: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.lists {
+  margin-right: 30px;
+}
+
+.lists > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin:  0 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.title {
+  height: 45%;
+  width: auto;
+  position: absolute;
+  left: 12%;
+  top: 36%;
+}
+
+.title > h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal; 
+  font-size: 6rem;
+  color: #e6edf3;
+}
+
+.title > p {
+  font-size: 1.6rem;
+  color: #e6edf3a8;
+  margin-left: 5px;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;}
+
+.logos {
+  position: absolute;
+  top: 87%;
+  left: 30%;
+  width: 40vw;
+  height: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#github-logo {
+  height: 50px;
+  width: 47px;
+}
+
+#linkedin-logo {
+  height: 50px;
+  width: 40px;
+}
+
+#discord-logo {
+  height: 50px;
+  width: 40px;
+}
+
+#gmail-logo {
+  height: 50px;
+  width: 40px;
+}
+
+.flex-column {
+  height: auto;
+  width: 7%;
+  margin-left: 3%;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 72%;
+}
+
+.line {
+  width: 3px;
+  background: linear-gradient(transparent, #7c72ff 30%);
+  height: 38vh;
+  margin-top: 10px;
+}
+
+.line1 {
+  width: 3px;
+  background: linear-gradient(transparent, #7c72ff, #26a641 88%);
+  height: 52vh;
+  margin-top: 10px;
+}
+
+.flex-column2 {
+  height: auto;
+  width: 7%;
+  margin-left: 3%;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me {
+  color: white;
+  height: 48px;
+  width: 48px;
+}
+
+.svg-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  margin-left: 4.2%;
+}
+
+.glow2 {
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  filter: blur(20px);
+  background-color: #26a641;
+  position: absolute;
+  top: 135.6%;
+  left: 75px;
+}
+
+.line2 {
+  width: 3px;
+  background: linear-gradient(#26a641 60%, transparent);
+  height: 0;
+overflow: hidden;
+}
+.line2.expanding {
+  animation: expand 1s forwards;
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+  }
+  to {
+    height: 355px;
+  }
+}
+.line2.retracting {
+  animation: retract 0.7s forwards;
+}
+@keyframes retract {
+  from {
+    height: 355px;
+  }
+  to {
+    height: 0;
+  }
+}
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  margin-left: 4.2%;
+  margin-top: 13px;
+}
+
+.glow {
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  filter: blur(20px);
+  background-color: #7c72ff;
+  position: absolute;
+  top: 465px;
+  left: 76px; 
+}
+.about{
+  position: absolute;
+  top: 132%;
+  left: 13%;
+  width: 70%;
+  height: auto;
+overflow-y: hidden;
+}
+.about > .info1{
+  font-size: 4rem;
+  color:#ffffff;
+  margin-left: 3px;
+  font-family: "Noto Sans", sans-serif;
+  overflow-y: hidden;
+}
+.about .info2{
+  font-size: 1.5rem;
+  color: #ffffff88;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+}
+.about h1{
+  color: #e6edf3e5;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400; 
+
+}
+.about h1 {
+  position: relative;
+  display: inline-block;
+  overflow-y: hidden;
+}
+
+.about h1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  left: 0;
+  bottom: -1px; /* Adjust based on your preference */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.about h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about p span{
+  color: #39d353;
+}
+.terminal {
+  background-color: rgb(18,24,31);
+  border-radius: 5px;
+  padding: 20px;
+  width: 45%;
+  min-height: 300px;
+  max-height: 550px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px #39d353;
+    overflow-x: hidden;
+    font-size: 1.5rem;
+    opacity: 0.97;
+    position: absolute;
+top: 202%;
+right: 50%;
+z-index: 6;
+}
+.hidden{
+  transform: translateX(3%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+#output {
+  margin-bottom: 10px;
+  
+}
+#output div {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+    color: #39d353;
+  font-size: 1.5rem; /* Example custom font size */
+}
+
+
+.prompt {
+  margin-right: 5px;
+  color: #39d353;
+  font-size: 1.5rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap; /* Prevents text wrapping */
+  display: inline-block; /* Allows padding and other box model properties */
+}
+
+#input {
+  background: none;
+  border: none;
+  color: #39d353;
+  outline: none;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.flex-column3{
+  background-color: #26a641;
+  height: auto;
+  width: 7%;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  position: absolute;
+top: 212%;
+overflow: hidden;
+}
+.flex-column4{
+  height: auto;
+  width: 7%;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  position: absolute;
+top: 328%;
+overflow: hidden;
+
+}
+.line5 {
+  width: 3px;
+  background: linear-gradient(transparent 40%, #F778BA 50%);
+  height: 65vh;
+  margin-top: 90%;
+}
+.svg-container4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  margin-left: 4.2%;
+  margin-top: 13px;
+}
+.glow3{
+  border-radius: 50%;
+  width: 26px;
+  height: 28px;
+  filter: blur(17px);
+  background-color: #F778BA;
+  position: absolute;
+  top: 50.1%;
+  left: 35px;
+}
+
+.line6{
+  width: 3px;
+  background: linear-gradient( #F778BA, transparent 90%);
+  height: 74vh;
+  margin-top: 13px;
+}
+.collaborate{ 
+ position: absolute;
+top:408.3%;
+left: 13%;
+width: 70%;
+height: auto;
+overflow-y: hidden;
+}
+.collaborate .second-heading{
+  font-size: 4rem;
+  color:#ffffff;
+  margin-left: 3px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  overflow-y: hidden;
+padding-bottom: 20px;
+}
+.collaborate h1{
+  color: #e6edf3;
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+.collaborate span{
+  color:#F778BA;
+}
+
+
+
+
+
+

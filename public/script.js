@@ -90,3 +90,20 @@ const observer = new IntersectionObserver((entries) =>{
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el)=> observer.observe(el));
+
+
+
+const skillsobserver = new IntersectionObserver((entries) =>{
+  entries.forEach((entr) =>{
+  if(entr.isIntersecting){
+    entr.target.classList.add('showskill');
+  }
+  else{
+    entr.target.classList.remove('showskill');
+
+  }
+  });
+}) ;
+
+const hiddenElement = document.querySelectorAll('.progress');
+hiddenElement.forEach((el)=> skillsobserver.observe(el));

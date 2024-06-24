@@ -499,7 +499,6 @@ color: #ffee00;
 }
 .showskill{
   animation: loadProgress 3s forwards ease;
-
 }
 @keyframes loadProgress {
   0% {

@@ -133,18 +133,18 @@ width: 100%;
 }
 
 #github-logo {
-  height: 50px;
+  height: 42px;
   width: 47px;
 }
 
 #linkedin-logo {
-  height: 50px;
+  height: 42px;
   width: 40px;
 }
 
 #discord-logo {
   height: 50px;
-  width: 40px;
+  width: 44px;
 }
 
 #gmail-logo {
@@ -270,7 +270,7 @@ overflow: hidden;
 }
 .about{
   position: absolute;
-  top: 132%;
+  top: 135%;
   left: 13%;
   width: 70%;
   height: auto;
@@ -414,15 +414,51 @@ z-index: 6;
 .line3{
   width: 3px;
   background: linear-gradient(transparent, #ffee00);
-  height: 65vh;
+  height: 35vh;
+  margin-bottom: 23%;
 }
 .line4{
   width: 3px;
   background: linear-gradient( #ffee00 50%, transparent);
-  height: 65vh;
-  margin-top: 66%;
+  height: 0;
+  margin-top: 21%;
+  overflow: hidden;
+}
+.line4.showLine {
+  animation: expands 1s forwards;
 }
 
+@keyframes expands {
+  from {
+    height: 0;
+  }
+  to {
+    height: 65vh;
+  }
+}
+.line4.hideLine {
+  animation: retracts 0.7s forwards;
+}
+@keyframes retracts {
+  from {
+    height: 65vh;
+  }
+  to {
+    height: 0;
+  }
+}
+.svg-container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  margin-left: 4.2%;
+}
+.skills-svg{
+  color: white;
+  height: 26px;
+  width: 48px;
+}
 
 .glow3 {border-radius: 50%;
 width: 26px;
@@ -430,8 +466,9 @@ height: 28px;
 filter: blur(17px);
 background-color:#ffee00 ;
 position: absolute;
-top: 49.1%;
-left: 35px;}
+top: 289.1%;
+left: 71px;
+}
 
 .skills{
   position: absolute;

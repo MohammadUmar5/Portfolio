@@ -3,26 +3,36 @@
 // script.js
 window.addEventListener('scroll', () => {
   const line2 = document.querySelector('.line2');
+  const line4 = document.querySelector('.line4');
 
   const scrollPosition = window.scrollY;
-  const elementPosition = line2.offsetTop;
   const windowHeight = window.innerHeight;
-
-  // Additional offset in pixels before the element reaches the viewport
   const additionalOffset = 50; // Adjust this value as needed
 
-  // Check if the element is in the viewport with additional offset
-  if (scrollPosition + windowHeight > elementPosition + additionalOffset) {
-    line2.classList.add('expanding');
-    line2.classList.remove('retracting');
+  if (line2) {
+    const elementPosition = line2.getBoundingClientRect().top + scrollPosition;
 
-  } else if(scrollPosition + windowHeight < elementPosition + additionalOffset){
-    line2.classList.add('retracting');
-    line2.classList.remove('expanding');
+    if (scrollPosition + windowHeight > elementPosition + additionalOffset) {
+      line2.classList.add('expanding');
+      line2.classList.remove('retracting');
+    } else {
+      line2.classList.add('retracting');
+      line2.classList.remove('expanding');
+    }
+  }
+
+  if (line4) {
+    const elementPosition2 = line4.getBoundingClientRect().top + scrollPosition;
+
+    if (scrollPosition + windowHeight > elementPosition2 + additionalOffset) {
+      line4.classList.add('showLine');
+      line4.classList.remove('hideLine');
+    } else {
+      line4.classList.remove('showLine');
+      line4.classList.add('hideLine');
+    }
   }
 });
-
- 
 
 
 
@@ -107,3 +117,6 @@ const skillsobserver = new IntersectionObserver((entries) =>{
 
 const hiddenElement = document.querySelectorAll('.progress');
 hiddenElement.forEach((el)=> skillsobserver.observe(el));
+
+
+

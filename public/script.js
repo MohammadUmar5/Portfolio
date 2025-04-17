@@ -98,8 +98,6 @@ const observer = new IntersectionObserver((entries) =>{
 }) ;
 
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el)=> observer.observe(el));
 
 
 
@@ -115,8 +113,13 @@ const skillsobserver = new IntersectionObserver((entries) =>{
   });
 }) ;
 
-const hiddenElement = document.querySelectorAll('.progress');
-hiddenElement.forEach((el)=> skillsobserver.observe(el));
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  const progressElements = document.querySelectorAll('.progress');
+  progressElements.forEach((el) => skillsobserver.observe(el));
+});
